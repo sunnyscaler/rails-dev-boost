@@ -38,7 +38,6 @@ module RailsDevelopmentBoost
       
       ActiveSupport::Dependencies::Loadable.module_eval do
         include LoadablePatch
-        alias_method :require_dependency, 'constant_tracking'
       end
 
       InstrumentationPatch.apply! if @do_instrument
